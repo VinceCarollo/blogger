@@ -12,7 +12,7 @@ describe 'user clicks create new article' do
             fill_in 'article[title]', with: 'New Title!'
             fill_in 'article[body]', with: 'New Body!'
             click_on 'Create Article'
-
+            
             expect(page).to have_content('New Title!')
             expect(page).to have_content('New Body!')
         end
