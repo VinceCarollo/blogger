@@ -17,7 +17,7 @@ RSpec.describe 'As a visitor' do
         fill_in 'article[body]', with: "New Body"
         click_on "Update Article"
 
-        expect(current_path).to eq(article_path(Article.last))
+        expect(current_path).to eq(article_path(article_1))
         expect(page).to have_content('New Title')
         expect(page).to have_content('New Body')
       end
