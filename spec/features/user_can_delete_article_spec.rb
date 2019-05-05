@@ -9,9 +9,9 @@ RSpec.describe 'user clicks on individual article' do
       visit article_path(article_1)
       click_link "Delete"
 
+      expect(page).to have_content("Article 'Title 1' Deleted!")
       expect(current_path).to eq(articles_path)
       expect(page).to have_content(article_2.title)
-      expect(page).to_not have_content(article_1.title)
     end
   end
 end
